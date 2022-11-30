@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div container>
+        <ul>
+            <li> <a class="" href="https://localhost:8080">Home</a></li>
+            <li><a href="/show">Show</a></li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Control</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <% student.forEach((students)=>{%>
+                    <tr>
+                        <td>
+                            <%- student._id %>
+                        </td>
+                        <td>
+                            <%- student._name %>
+                        </td>
+                        <td>
+                            <%- student._email %>
+                        </td>
+
+                        <td>
+                            <a href="#">
+                                <span class="blue">View</span></a>
+                            <a href="delete/<%= student._id %>">
+                                <span class="pink">Delete</span></a>
+                        </td>
+                    </tr>
+
+
+                    <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>
